@@ -62,6 +62,7 @@ class CNN(nn.Module):
     def forward(self, x):
         x = self.convlayer1(x)
         x = self.convlayer2(x)
+
         x = x.view(-1, 64 * 6 * 6)
         x = self.fc1(x)
         x = self.drop(x)
@@ -109,9 +110,14 @@ with TrackingClient.start_run():
     # Set the run name
     TrackingClient.set_run_name("Test Pytorch 1")
 
+    TrackingClient.log_params({"epochs": epochs})
+
     pbar = ProgressBar(persist=True, bar_format="")
     pbar.attach(trainer, ["loss"])
     trainer.run(train_loader, max_epochs=epochs)
+
+    for metric, value in trainer.state.metrics.items():
+        TrackingClient.log_metric(metric, value)
 
     # Generate signature using MLOps
     x_train_batch, y_train_batch = next(iter(train_loader))
