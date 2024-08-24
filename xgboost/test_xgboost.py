@@ -22,7 +22,9 @@ TrackingClient.set_experiment(experiment_name)
 db = load_diabetes()
 X_train, X_test, y_train, y_test = train_test_split(db.data, db.target)
 
+TrackingClient.enable_system_metrics_logging()
 with TrackingClient.start_run():
+    TrackingClient.autolog()
 
     # Set the run name
     TrackingClient.set_run_name("Run XGDBoost 1")
