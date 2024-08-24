@@ -23,7 +23,9 @@ db = load_diabetes()
 X_train, X_test, y_train, y_test = train_test_split(db.data, db.target)
 
 print("Start run")
+TrackingClient.enable_system_metrics_logging()
 with TrackingClient.start_run():
+    TrackingClient.autolog()
 
     # Set the run name
     TrackingClient.set_run_name("Run Scikit-Learn 1")
