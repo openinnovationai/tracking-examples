@@ -32,7 +32,9 @@ y = np.dot(X, true_coefficients) + noise
 # Add a constant term to the independent variable (intercept)
 X = sm.add_constant(X)
 
+TrackingClient.enable_system_metrics_logging()
 with TrackingClient.start_run():
+    TrackingClient.autolog()
 
     # Set the run name
     TrackingClient.set_run_name("Test Statsmodel 1")
