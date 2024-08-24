@@ -42,7 +42,9 @@ x_test = tokenizer.sequences_to_matrix(x_test, mode="binary")
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
+TrackingClient.enable_system_metrics_logging()
 with TrackingClient.start_run():
+    TrackingClient.tensorflow.autolog()
 
     # Set the run name
     TrackingClient.set_run_name("Test Keras 1")
