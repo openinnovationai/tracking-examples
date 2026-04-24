@@ -28,10 +28,12 @@ Each example lives in its own folder. Every folder contains:
 
 ## Before You Run
 
-Install the internal `v2` tracking client in your Python environment first. The environment must provide:
+fill the below env vars
 
-```python
-from oip_tracking_client.v2.tracking import TrackingClient
+```
+export OICM_TRACKING_API_HOST=<host_name_ending_with_api/tracking>
+export OICM_TRACKING_API_KEY=<generated_from_api_key>
+export OICM_TRACKING_API_KEY=<workspace_id>
 ```
 
 ## How To Run One Example
