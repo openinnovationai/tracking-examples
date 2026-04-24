@@ -33,7 +33,7 @@ fill the below env vars
 ```
 export OICM_TRACKING_API_HOST=<host_name_ending_with_api/tracking>
 export OICM_TRACKING_API_KEY=<generated_from_api_key>
-export OICM_TRACKING_API_KEY=<workspace_id>
+export OICM_WORKSPACE_ID=<workspace_id>
 ```
 
 ## How To Run One Example
