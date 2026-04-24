@@ -21,7 +21,7 @@ python test_sklearn.py
 
 ### `v2`
 
-`v2` uses one shared dependency file and one shared README:
+`v2` Each example has its own requirements.txt
 
 ```bash
 cd v2
