@@ -1,0 +1,2 @@
+oip-tracking-client==1.0.0
+scikit-learn>=1.4,<1.6

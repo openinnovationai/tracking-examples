@@ -1,26 +1,31 @@
 # OpenInnovation Tracking Examples
 
-This repository contains examples to get started with the OpenInnovation **Tracking** feature.
+This repository contains runnable examples for both generations of the OpenInnovation tracking client.
 
-## Requirements
-- Python 3.9.6
+## Layout
 
-## Installation
+- `v1/`: examples for older tracking client
+- `v2/`: the current examples for `oip_tracking_client.v2.tracking.TrackingClient`
 
-Clone the repository with `git clone https://github.com/openinnovationai/tracking-examples`
+## Quick Start
 
-## Examples
+### `v1`
 
-Each folder has an example with Tracking using a specific library.
+Each example still has its own dependencies:
 
-For each example:
-
-- Install the requirements using `pip install -r requirements`
-
-- Fill-in your workspace configuration in the python file
-```python
-api_host = "http://<oi_platform>/api"
-api_key = "<api_key>"
-workspace_name = "<workspace_name>"
-experiment_name = "<experiment_name>"
+```bash
+cd v1/sklearn
+pip install -r requirements.txt
+python test_sklearn.py
 ```
+
+### `v2`
+
+`v2` Each example has its own requirements.txt
+
+```bash
+cd v2
+pip install -r requirements.txt
+```
+
+Then follow the run instructions in [v2/README.md](/Users/kush/PycharmProjects/tracking-examples/v2/README.md).
