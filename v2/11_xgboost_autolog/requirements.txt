@@ -1,5 +1,0 @@
-oip-tracking-client==1.0.0
-matplotlib>=3.8
-pandas>=2.2
-scikit-learn>=1.4,<1.6
-xgboost>=2.0,<2.2
