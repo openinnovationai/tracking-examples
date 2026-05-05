@@ -53,10 +53,3 @@ cd v2/10_sklearn_autolog
 pip install -r requirements.txt
 python 10_sklearn_autolog.py
 ```
-
-## Notes
-
-- `01` to `10` focus on `TrackingClient` workflows.
-- `11` and `12` keep the library-flavored autolog examples.
-- `06_offline_mode` stays on `TrackingClient` only and includes a small workaround for the current `oip-tracking-client==1.0.0` offline run-name lookup bug.
-- `v1/` still contains the older artifact-heavy examples.
